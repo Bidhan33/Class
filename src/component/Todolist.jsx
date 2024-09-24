@@ -9,10 +9,12 @@ function Todolist()  {
     const [todos, setTodos] = useState([]);
 
     const [colDefs, setColDefs] = useState([
-        {field: "description", filter:true  },
-        {field: "priority"},
-        {field: "duedate"}
-    ])
+        {field: "description", filter:true, },
+        {field: "priority", 
+            cellStyle: params => params.value === "High" ? {color: 'red'} : {color: 'black'} 
+        },
+        {field: "duedate", filter:true}
+    ]);
  
     const handleAdd = () => {
         if(!todo){
@@ -64,6 +66,7 @@ function Todolist()  {
             <AgGridReact
             rowData={todos}
             columnDefs={colDefs}
+             rowSelection="single"
             />
             
             
