@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css'
 import Todolist from './component/Todolist'
 import Container from '@mui/material/Container'
@@ -5,6 +6,9 @@ import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import Menu from './component/Menu'
+
+
 
 function App() {
     return (
@@ -16,6 +20,7 @@ function App() {
                     </Typography>
                 </Toolbar>
             </AppBar>
+            <Menu />
             <Todolist />
             <CssBaseline />
         </Container>
@@ -23,3 +28,4 @@ function App() {
 }
 
 export default App;
+1
