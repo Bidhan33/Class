@@ -6,7 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Menu from './component/Menu'
+
 
 
 
@@ -20,7 +20,7 @@ function App() {
                     </Typography>
                 </Toolbar>
             </AppBar>
-            <Menu />
+            
             <Todolist />
             <CssBaseline />
         </Container>
