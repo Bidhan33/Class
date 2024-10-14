@@ -1,18 +1,16 @@
 import React from 'react';
 import './App.css'
-import Todolist from './component/Todolist'
 import Container from '@mui/material/Container'
 import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-
-
-
+import BasicTabs from './component/Menu';
 
 function App() {
     return (
         <Container maxWidth="md">
+            <CssBaseline />
             <AppBar position='static'>
                 <Toolbar>
                     <Typography variant='h6'>
@@ -20,12 +18,9 @@ function App() {
                     </Typography>
                 </Toolbar>
             </AppBar>
-            
-            <Todolist />
-            <CssBaseline />
+            <BasicTabs />
         </Container>
     )
 }
 
 export default App;
-1
