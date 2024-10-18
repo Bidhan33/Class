@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { TextField } from "@mui/material";
 import Stack from '@mui/material/Stack';
-import { LocalizationProvider } from '@mui/x-date-pickers';
+import { ClearIcon, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { format } from 'date-fns';
@@ -36,6 +36,10 @@ function Todolist() {
       setTodos([newTodo, ...todos]);
       setTodo({ description: "", duedate: null, priority: "" });
     }
+  };
+    
+  const handleclear = () => {
+    setTodos([]);
   };
 
   const handleDelete = () => {
@@ -90,6 +94,15 @@ function Todolist() {
           style={{ width: '150px' }}
         >
           Delete
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          endIcon={<ClearIcon />}
+          onClick={handleclear}
+          style={{ width: '150px' }}
+        >
+          Clear
         </Button>
       </Stack>
       <div className='ag-theme-material' style={{ height: 500, width: '80%' }}>
